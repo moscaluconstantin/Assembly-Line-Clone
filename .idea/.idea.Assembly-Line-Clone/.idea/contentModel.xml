@@ -179,6 +179,7 @@
             <e p="PointerStateType.cs" t="Include" />
           </e>
           <e p="GlobalManagers" t="Include">
+            <e p="CurrencyManager.cs" t="Include" />
             <e p="PointerStateManager.cs" t="Include" />
           </e>
           <e p="Managers" t="Include">

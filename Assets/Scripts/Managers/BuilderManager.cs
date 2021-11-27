@@ -1,4 +1,5 @@
 ﻿using Controllers.Devices;
+using GlobalManagers;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -19,6 +20,8 @@ namespace Managers
                 var device = Instantiate(starterControllerPrefab, transform);
                 device.transform.position = selectedController.transform.position;
 
+                CurrencyManager.AddCurrency(device.Price);
+
                 selectedController.AddDevice(device);
             }
             
@@ -30,6 +33,7 @@ namespace Managers
         {
             foreach (var selectedController in selectionManager.SelectedControllers)
             {
+                CurrencyManager.AddCurrency(-selectedController.Device.SellPrice);
                 selectedController.RemoveDevice();
             }
             

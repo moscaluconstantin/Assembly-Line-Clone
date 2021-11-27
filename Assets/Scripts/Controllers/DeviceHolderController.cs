@@ -11,6 +11,8 @@ namespace Controllers
             PointerStateManager.CurrentState == PointerStateType.BuySelection && device == null ||
             PointerStateManager.CurrentState == PointerStateType.SellSelection && device != null;
 
+        public DeviceBaseController Device => device;
+
         private bool isSelected;
         private DeviceBaseController device;
 
@@ -59,7 +61,7 @@ namespace Controllers
         public void AddDevice(DeviceBaseController device)
         {
             this.device = device;
-            
+
             Deselect();
         }
 
@@ -67,7 +69,7 @@ namespace Controllers
         {
             Destroy(device.gameObject);
             device = null;
-            
+
             Deselect();
         }
     }
