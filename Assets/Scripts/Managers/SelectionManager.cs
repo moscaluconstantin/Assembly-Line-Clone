@@ -60,15 +60,31 @@ namespace Managers
                 return;
 
             if (PointerStateManager.CurrentState == PointerStateType.None)
-                return;
-
-            if (!hit.collider.transform.parent.TryGetComponent(out SelectableController selectableController)) 
-                return;
-            
-            if (selectableController.CanBeSelected)
             {
-                selectableController.Select();
+                
             }
+            else
+            {
+                if (!hit.collider.transform.parent.TryGetComponent(out SelectableController selectableController)) 
+                    return;
+
+                if (!selectableController.CanBeSelected)
+                    return;
+                
+                selectableController.Select();
+                HandleSelection(selectableController);
+            }
+        }
+
+        private void HandleSelection(SelectableController selectableController)
+        {
+            if (!selectedControllers.Contains(selectableController))
+            {
+                selectedControllers.Add(selectableController);
+                return;
+            }
+
+            selectedControllers.Remove(selectableController);
         }
     }
 }
