@@ -2,7 +2,7 @@
 
 namespace Controllers.Devices
 {
-    public class StarterController : MonoBehaviour
+    public class StarterController : DeviceBaseController
     {
     }
 }

@@ -12,7 +12,7 @@ namespace Controllers
             PointerStateManager.CurrentState == PointerStateType.SellSelection && device != null;
 
         private bool isSelected;
-        private StarterController device;
+        private DeviceBaseController device;
 
         private ColorController colorController;
 
@@ -56,9 +56,9 @@ namespace Controllers
             colorController.SetDefaultColor();
         }
 
-        public void AddDevice(StarterController starterController)
+        public void AddDevice(DeviceBaseController device)
         {
-            device = starterController;
+            this.device = device;
             
             Deselect();
         }
