@@ -10,13 +10,14 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/SelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BufferCurrencyTextController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/SetPointerStateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/Devices/DeviceBaseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalManagers/PointerStateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/DeviceHolderController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/DeviceHoldersManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/ColorController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CurrencyTextController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TotalCurrencyTextController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/BuilderManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enums/PointerStateType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalManagers/CurrencyManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,19 +48,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Devices/StarterController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/PointerStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GlobalManagers/CurencyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalManagers/CurrencyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeviceHolderController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/BuilderManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/BuilderManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/ColorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/Devices/StarterController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/SelectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/Devices/DeviceBaseController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/DeviceHolderController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/DeviceHoldersManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/GridPointsSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/SetPointerStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalManagers/CurrencyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CurrencyTextController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/BuilderManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TotalCurrencyTextController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/BufferCurrencyTextController.cs" />
       </list>
     </option>
   </component>

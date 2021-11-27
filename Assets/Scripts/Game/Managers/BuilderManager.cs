@@ -1,4 +1,6 @@
-﻿using Game.Controllers.Devices;
+﻿using System.Linq;
+using Enums;
+using Game.Controllers.Devices;
 using GlobalManagers;
 using NaughtyAttributes;
 using UnityEngine;
@@ -11,7 +13,17 @@ namespace Game.Managers
 
         [HorizontalLine]
         [SerializeField] private SelectionManager selectionManager;
-        
+
+        private void Awake()
+        {
+            selectionManager.OnSelectionListModified += UpdateBufferCurrencyValue;
+        }
+
+        private void OnDestroy()
+        {
+            selectionManager.OnSelectionListModified -= UpdateBufferCurrencyValue;
+        }
+
         [Button("Build")]
         public void Build()
         {
@@ -20,12 +32,11 @@ namespace Game.Managers
                 var device = Instantiate(starterControllerPrefab, transform);
                 device.transform.position = selectedController.transform.position;
 
-                CurrencyManager.AddCurrency(-device.Price);
-
                 selectedController.AddDevice(device);
             }
             
             selectionManager.ClearSelection();
+            CurrencyManager.FinishTransaction();
         }
         
         [Button("Remove")]
@@ -33,11 +44,24 @@ namespace Game.Managers
         {
             foreach (var selectedController in selectionManager.SelectedControllers)
             {
-                CurrencyManager.AddCurrency(selectedController.Device.SellPrice);
                 selectedController.RemoveDevice();
             }
             
             selectionManager.ClearSelection();
+            CurrencyManager.FinishTransaction();
+        }
+
+        private void UpdateBufferCurrencyValue()
+        {
+            if (PointerStateManager.CurrentState == PointerStateType.BuySelection)
+            {
+                CurrencyManager.BufferCurrencyValue = selectionManager.SelectedControllers.Count * -starterControllerPrefab.Price;
+                return;
+            }
+
+            var totalValue = selectionManager.SelectedControllers.Sum(selectedController => selectedController.Device.SellPrice);
+
+            CurrencyManager.BufferCurrencyValue = totalValue;
         }
     }
 }

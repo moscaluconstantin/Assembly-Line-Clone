@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class CurrencyTextController : MonoBehaviour
+    public class TotalCurrencyTextController : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI currencyText;
 
@@ -25,7 +25,7 @@ namespace UI
 
         private void UpdateText(float newValue)
         {
-            currencyText.text = "$ " + newValue;
+            currencyText.text = "" + newValue;
         }
     }
 }

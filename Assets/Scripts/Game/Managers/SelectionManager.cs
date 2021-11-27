@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Enums;
 using Game.Controllers;
 using GlobalManagers;
@@ -15,8 +16,10 @@ namespace Game.Managers
         [HorizontalLine] 
         [SerializeField] private Camera gameCamera;
 
-        public List<DeviceHolderController> SelectedControllers => selectedControllers;
+        public event Action OnSelectionListModified; 
         
+        public List<DeviceHolderController> SelectedControllers => selectedControllers;
+
         private List<DeviceHolderController> selectedControllers;
         
         private void Awake()
@@ -85,10 +88,13 @@ namespace Game.Managers
             if (!selectedControllers.Contains(selectableController))
             {
                 selectedControllers.Add(selectableController);
-                return;
+            }
+            else
+            {
+                selectedControllers.Remove(selectableController);
             }
 
-            selectedControllers.Remove(selectableController);
+            OnSelectionListModified?.Invoke();
         }
     }
 }
