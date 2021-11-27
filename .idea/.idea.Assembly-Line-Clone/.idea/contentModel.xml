@@ -173,6 +173,9 @@
             </e>
             <e p="ColorController.cs" t="Include" />
             <e p="DeviceHolderController.cs" t="Include" />
+            <e p="Devices" t="Include">
+              <e p="StarterController.cs" t="Include" />
+            </e>
           </e>
           <e p="Enums" t="Include">
             <e p="PointerStateType.cs" t="Include" />
