@@ -171,6 +171,7 @@
             <e p="ColorController.cs" t="Include" />
             <e p="DeviceHolderController.cs" t="Include" />
             <e p="Devices" t="Include">
+              <e p="DeviceBaseController.cs" t="Include" />
               <e p="StarterController.cs" t="Include" />
             </e>
           </e>
