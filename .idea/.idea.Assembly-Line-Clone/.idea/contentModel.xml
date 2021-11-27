@@ -181,6 +181,7 @@
             <e p="PointerStateManager.cs" t="Include" />
           </e>
           <e p="Managers" t="Include">
+            <e p="BuilderManager.cs" t="Include" />
             <e p="DeviceHoldersManager.cs" t="Include" />
             <e p="GridPointsSetup.cs" t="Include" />
             <e p="SelectionManager.cs" t="Include" />

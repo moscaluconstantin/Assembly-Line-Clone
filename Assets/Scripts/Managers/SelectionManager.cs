@@ -15,8 +15,10 @@ namespace Managers
         [HorizontalLine] 
         [SerializeField] private Camera gameCamera;
 
+        public List<DeviceHolderController> SelectedControllers => selectedControllers;
+        
         private List<DeviceHolderController> selectedControllers;
-
+        
         private void Awake()
         {
             InitData();
@@ -75,6 +77,8 @@ namespace Managers
                 HandleSelection(deviceHolderController);
             }
         }
+
+        public void ClearSelection() => selectedControllers.Clear();
 
         private void HandleSelection(DeviceHolderController selectableController)
         {

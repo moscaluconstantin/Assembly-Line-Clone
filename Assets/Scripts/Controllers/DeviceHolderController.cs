@@ -55,5 +55,20 @@ namespace Controllers
 
             colorController.SetDefaultColor();
         }
+
+        public void AddDevice(StarterController starterController)
+        {
+            device = starterController;
+            
+            Deselect();
+        }
+
+        public void RemoveDevice()
+        {
+            Destroy(device.gameObject);
+            device = null;
+            
+            Deselect();
+        }
     }
 }
