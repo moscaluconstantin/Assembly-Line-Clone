@@ -4,24 +4,21 @@ namespace Controllers
 {
     public class ColorController : MonoBehaviour
     {
-        [SerializeField] private Color selectColor;
+        [SerializeField] private Color defaultSelectionColor;
+        [SerializeField] private Color buySelectionColor;
+        [SerializeField] private Color sellSelectionColor;
 
-        private Color defaultColor;
         private Renderer colorControllerRenderer;
 
         private void Awake()
         {
-            InitData();
-        }
-
-        private void InitData()
-        {
             colorControllerRenderer = GetComponentInChildren<Renderer>();
-            defaultColor = colorControllerRenderer.material.color;
+            SetDefaultColor();
         }
 
-        public void SetSelectColor() => SetSpriteColor(selectColor);
-        public void SetDefaultColor() => SetSpriteColor(defaultColor);
+        public void SetBuySelectColor() => SetSpriteColor(buySelectionColor);
+        public void SetSellSelectColor() => SetSpriteColor(sellSelectionColor);
+        public void SetDefaultColor() => SetSpriteColor(defaultSelectionColor);
 
         private void SetSpriteColor(Color color) => colorControllerRenderer.material.color = color;
     }

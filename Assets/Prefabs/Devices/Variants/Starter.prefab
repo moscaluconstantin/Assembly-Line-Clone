@@ -135,19 +135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1505724204489829287, guid: f4d98a56c4996d645af40881aa3f4168, type: 3}
       propertyPath: m_Name
-      value: Simple Device
-      objectReference: {fileID: 0}
-    - target: {fileID: 5970640902103244272, guid: f4d98a56c4996d645af40881aa3f4168, type: 3}
-      propertyPath: selectColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5970640902103244272, guid: f4d98a56c4996d645af40881aa3f4168, type: 3}
-      propertyPath: selectColor.g
-      value: 0.041269146
-      objectReference: {fileID: 0}
-    - target: {fileID: 5970640902103244272, guid: f4d98a56c4996d645af40881aa3f4168, type: 3}
-      propertyPath: selectColor.r
-      value: 1
+      value: Starter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d98a56c4996d645af40881aa3f4168, type: 3}
@@ -173,4 +161,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ca1907b39e4a67b35014f822cf0b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableState: 2

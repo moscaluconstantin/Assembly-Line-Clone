@@ -1,15 +1,8 @@
-﻿using Controllers.Base;
+﻿using UnityEngine;
 
 namespace Controllers.Devices
 {
-    public class StarterController : SelectableController
+    public class StarterController : MonoBehaviour
     {
-        protected override void OnSelected()
-        {
-        }
-
-        protected override void OnDeselected()
-        {
-        }
     }
 }

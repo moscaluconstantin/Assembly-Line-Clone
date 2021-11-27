@@ -1,15 +1,59 @@
-﻿using Controllers.Base;
+﻿using Controllers.Devices;
+using Enums;
+using GlobalManagers;
+using UnityEngine;
 
 namespace Controllers
 {
-    public class DeviceHolderController : SelectableController
+    public class DeviceHolderController : MonoBehaviour
     {
-        protected override void OnSelected()
+        public bool CanBeSelected =>
+            PointerStateManager.CurrentState == PointerStateType.BuySelection && device == null ||
+            PointerStateManager.CurrentState == PointerStateType.SellSelection && device != null;
+
+        private bool isSelected;
+        private StarterController device;
+
+        private ColorController colorController;
+
+        private void Awake()
         {
+            InitData();
         }
 
-        protected override void OnDeselected()
+        private void InitData()
         {
+            isSelected = false;
+
+            colorController = GetComponentInChildren<ColorController>();
+        }
+
+        public void Select()
+        {
+            if (isSelected)
+            {
+                Deselect();
+                return;
+            }
+
+            isSelected = true;
+
+            switch (PointerStateManager.CurrentState)
+            {
+                case PointerStateType.BuySelection:
+                    colorController.SetBuySelectColor();
+                    break;
+                case PointerStateType.SellSelection:
+                    colorController.SetSellSelectColor();
+                    break;
+            }
+        }
+
+        public void Deselect()
+        {
+            isSelected = false;
+
+            colorController.SetDefaultColor();
         }
     }
 }

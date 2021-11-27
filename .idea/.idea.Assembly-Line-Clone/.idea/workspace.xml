@@ -18,7 +18,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Devices/StarterController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GridPointsSetup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalManagers/PointerStateManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Base/SelectableController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -35,13 +34,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GlobalManagers/PointerStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DeviceHoldersManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GridPointsSetup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeviceHolderController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Base/SelectableController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SetPointerStateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ColorController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SelectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeviceController/StarterController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Devices/StarterController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ColorController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeviceHolderController.cs" />
       </list>
     </option>
   </component>

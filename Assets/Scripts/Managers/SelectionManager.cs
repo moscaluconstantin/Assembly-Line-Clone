@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Controllers.Base;
+using Controllers;
 using Enums;
 using GlobalManagers;
 using NaughtyAttributes;
@@ -15,7 +15,7 @@ namespace Managers
         [HorizontalLine] 
         [SerializeField] private Camera gameCamera;
 
-        private List<SelectableController> selectedControllers;
+        private List<DeviceHolderController> selectedControllers;
 
         private void Awake()
         {
@@ -25,7 +25,7 @@ namespace Managers
         private void InitData()
         {
             PointerStateManager.CurrentState = initialPointerState;
-            selectedControllers=new List<SelectableController>();
+            selectedControllers=new List<DeviceHolderController>();
         }
 
         private void Update()
@@ -59,24 +59,24 @@ namespace Managers
             if (!hit.collider)
                 return;
 
+            if (!hit.collider.transform.parent.TryGetComponent(out DeviceHolderController deviceHolderController)) 
+                return;
+            
             if (PointerStateManager.CurrentState == PointerStateType.None)
             {
                 
             }
             else
             {
-                if (!hit.collider.transform.parent.TryGetComponent(out SelectableController selectableController)) 
-                    return;
-
-                if (!selectableController.CanBeSelected)
+                if (!deviceHolderController.CanBeSelected)
                     return;
                 
-                selectableController.Select();
-                HandleSelection(selectableController);
+                deviceHolderController.Select();
+                HandleSelection(deviceHolderController);
             }
         }
 
-        private void HandleSelection(SelectableController selectableController)
+        private void HandleSelection(DeviceHolderController selectableController)
         {
             if (!selectedControllers.Contains(selectableController))
             {

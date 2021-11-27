@@ -168,9 +168,6 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Controllers" t="Include">
-            <e p="Base" t="Include">
-              <e p="SelectableController.cs" t="Include" />
-            </e>
             <e p="ColorController.cs" t="Include" />
             <e p="DeviceHolderController.cs" t="Include" />
             <e p="Devices" t="Include">
