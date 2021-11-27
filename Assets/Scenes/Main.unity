@@ -270,6 +270,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1247477575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1247477576}
+  - component: {fileID: 1247477577}
+  m_Layer: 0
+  m_Name: Set Pointer State Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1247477576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247477575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1987749079}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1247477577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247477575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440b7f7a24d841e7a119311891aee6bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerState: 0
 --- !u!1 &1249717254
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,8 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1c1dbd67224765921248a7a5e7df5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildSelectionColor: {r: 0.017205596, g: 1, b: 0, a: 1}
-  deleteSelectionColor: {r: 1, g: 0, b: 0, a: 1}
+  initialPointerState: 0
   gameCamera: {fileID: 519420031}
 --- !u!1 &1987749078
 GameObject:
@@ -469,6 +512,7 @@ Transform:
   m_Children:
   - {fileID: 407456889}
   - {fileID: 1731279015}
+  - {fileID: 1247477576}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

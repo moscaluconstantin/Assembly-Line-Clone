@@ -1,23 +1,28 @@
 ﻿using UnityEngine;
 
-public class ColorController : MonoBehaviour
+namespace Controllers
 {
-    private Color defaultColor;
-    private Renderer renderer;
-
-    private void Awake()
+    public class ColorController : MonoBehaviour
     {
-        InitData();
+        [SerializeField] private Color selectColor;
+
+        private Color defaultColor;
+        private Renderer colorControllerRenderer;
+
+        private void Awake()
+        {
+            InitData();
+        }
+
+        private void InitData()
+        {
+            colorControllerRenderer = GetComponentInChildren<Renderer>();
+            defaultColor = colorControllerRenderer.material.color;
+        }
+
+        public void SetSelectColor() => SetSpriteColor(selectColor);
+        public void SetDefaultColor() => SetSpriteColor(defaultColor);
+
+        private void SetSpriteColor(Color color) => colorControllerRenderer.material.color = color;
     }
-
-    private void InitData()
-    {
-        renderer = GetComponent<Renderer>();
-        defaultColor = renderer.material.color;
-    }
-
-    public void SetColor(Color color) => SetSpriteColor(color);
-    public void SetDefaultColor() => SetSpriteColor(defaultColor);
-
-    private void SetSpriteColor(Color color) => renderer.material.color = color;
 }

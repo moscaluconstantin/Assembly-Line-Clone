@@ -1,23 +1,43 @@
-﻿using NaughtyAttributes;
+﻿using System.Collections.Generic;
+using Controllers.Base;
+using Enums;
+using GlobalManagers;
+using NaughtyAttributes;
 using UnityEngine;
 
-public class SelectionManager : MonoBehaviour
+namespace Managers
 {
-    [SerializeField] private Color buildSelectionColor;
-    [SerializeField] private Color deleteSelectionColor;
-
-    [HorizontalLine] [SerializeField] private Camera gameCamera;
-
-    private void Update()
+    public class SelectionManager : MonoBehaviour
     {
-        Vector2 inputPosition;
+        [SerializeField] private PointerStateType initialPointerState;
+        [SerializeField] private LayerMask selectionLayerMask;
+    
+        [HorizontalLine] 
+        [SerializeField] private Camera gameCamera;
+
+        private List<SelectableController> selectedControllers;
+
+        private void Awake()
+        {
+            InitData();
+        }
+
+        private void InitData()
+        {
+            PointerStateManager.CurrentState = initialPointerState;
+            selectedControllers=new List<SelectableController>();
+        }
+
+        private void Update()
+        {
+            Vector2 inputPosition;
 
 #if UNITY_EDITOR
         
-        if (!Input.GetMouseButtonDown(0))
-            return;
+            if (!Input.GetMouseButtonDown(0))
+                return;
 
-        inputPosition = Input.mousePosition;
+            inputPosition = Input.mousePosition;
         
 #elif UNITY_ANDROID
 
@@ -30,19 +50,25 @@ public class SelectionManager : MonoBehaviour
         inputPosition = Input.GetTouch(0).position;
 
 #endif
+            
+            var touchWorldPosition = gameCamera.ScreenToWorldPoint(inputPosition);
+            var touchPosition = new Vector2(touchWorldPosition.x, touchWorldPosition.y);
 
+            var hit = Physics2D.Raycast(touchPosition, Vector2.zero, 20f, selectionLayerMask);
 
-        var touchWorldPosition = gameCamera.ScreenToWorldPoint(inputPosition);
-        var touchPosition = new Vector2(touchWorldPosition.x, touchWorldPosition.y);
+            if (!hit.collider)
+                return;
 
-        var hit = Physics2D.Raycast(touchPosition, Vector2.zero, 20f);
+            if (PointerStateManager.CurrentState == PointerStateType.None)
+                return;
 
-        if (!hit.collider)
-            return;
-
-        if (hit.collider.transform.TryGetComponent(out ColorController colorController))
-        {
-            colorController.SetColor(deleteSelectionColor);
+            if (!hit.collider.transform.parent.TryGetComponent(out SelectableController selectableController)) 
+                return;
+            
+            if (selectableController.CanBeSelected)
+            {
+                selectableController.Select();
+            }
         }
     }
 }

@@ -1,14 +1,27 @@
-﻿namespace GlobalManagers
+﻿using System;
+using Enums;
+
+namespace GlobalManagers
 {
-    public enum PointerStateType
-    {
-        None = 0,
-        BuySelection = 1,
-        SellSelection = 2
-    }
-    
     public static class PointerStateManager
     {
-        private static PointerStateType pointerState;
+        private static PointerStateType currentState;
+
+        public static event Action<PointerStateType> onPointerStateChanged;
+
+        public static PointerStateType CurrentState
+        {
+            get => currentState;
+
+            set
+            {
+                if (currentState == value)
+                    return;
+
+                currentState = value;
+
+                onPointerStateChanged?.Invoke(currentState);
+            }
+        }
     }
 }

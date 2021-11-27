@@ -168,8 +168,14 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Controllers" t="Include">
+            <e p="Base" t="Include">
+              <e p="SelectableController.cs" t="Include" />
+            </e>
             <e p="ColorController.cs" t="Include" />
             <e p="DeviceHolderController.cs" t="Include" />
+          </e>
+          <e p="Enums" t="Include">
+            <e p="PointerStateType.cs" t="Include" />
           </e>
           <e p="GlobalManagers" t="Include">
             <e p="PointerStateManager.cs" t="Include" />
@@ -178,6 +184,7 @@
             <e p="DeviceHoldersManager.cs" t="Include" />
             <e p="GridPointsSetup.cs" t="Include" />
             <e p="SelectionManager.cs" t="Include" />
+            <e p="SetPointerStateManager.cs" t="Include" />
           </e>
         </e>
       </e>

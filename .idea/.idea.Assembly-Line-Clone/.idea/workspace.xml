@@ -13,7 +13,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/ColorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/SelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enums/PointerStateType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/SetPointerStateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GridPointsSetup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalManagers/PointerStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Base/SelectableController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -25,6 +29,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ColorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DeviceHoldersManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalManagers/PoinerStateType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/PointerStateType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalManagers/PointerStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DeviceHoldersManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GridPointsSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeviceHolderController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Base/SelectableController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SetPointerStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ColorController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SelectionManager.cs" />
       </list>
     </option>
   </component>
@@ -59,9 +73,17 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1638025927744">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1638025927744" />
     <state x="420" y="294" key="SettingsEditor" timestamp="1638014597737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="420" y="294" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1638014597737" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1638026556693">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1638026556693" />
   </component>
 </project>

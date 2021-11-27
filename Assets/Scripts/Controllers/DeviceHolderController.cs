@@ -1,7 +1,15 @@
-﻿using System;
-using UnityEngine;
+﻿using Controllers.Base;
 
-public class DeviceHolderController : MonoBehaviour
+namespace Controllers
 {
-   
+    public class DeviceHolderController : SelectableController
+    {
+        protected override void OnSelected()
+        {
+        }
+
+        protected override void OnDeselected()
+        {
+        }
+    }
 }

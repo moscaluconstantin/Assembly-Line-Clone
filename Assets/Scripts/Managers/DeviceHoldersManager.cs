@@ -1,77 +1,81 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Controllers;
 using NaughtyAttributes;
 using UnityEngine;
 
-public class DeviceHoldersManager : MonoBehaviour
+namespace Managers
 {
-    [SerializeField] private DeviceHolderController deviceHolderPrefab;
-    [SerializeField] private Transform deviceHoldersContainerTransform;
-
-    private GridPointsSetup gridPointsSetup;
-
-    private void Awake()
+    public class DeviceHoldersManager : MonoBehaviour
     {
-        InitData();
-    }
+        [SerializeField] private DeviceHolderController deviceHolderPrefab;
+        [SerializeField] private Transform deviceHoldersContainerTransform;
 
-    private void InitData()
-    {
-        gridPointsSetup = GetComponent<GridPointsSetup>();
-        CreateDeviceHolders();
-    }
+        private GridPointsSetup gridPointsSetup;
 
-    private void CreateDeviceHolders()
-    {
-        var deviceHolders = GetMatchToAmountDeviceHolders();
-        var points = gridPointsSetup.GetGridPositions();
-        
-        for (var i = 0; i < deviceHolders.Length; i++)
+        private void Awake()
         {
-            deviceHolders[i].transform.position = points[i];
-            deviceHolders[i].transform.name = "Device Holder " + i;
+            InitData();
         }
-    }
 
-    private DeviceHolderController[] GetMatchToAmountDeviceHolders()
-    {
-        var points = new List<DeviceHolderController>(GetDeviceHolders());
-
-        while (points.Count != gridPointsSetup.GridElementsAmount)
+        private void InitData()
         {
-            if (points.Count < gridPointsSetup.GridElementsAmount)
+            gridPointsSetup = GetComponent<GridPointsSetup>();
+            CreateDeviceHolders();
+        }
+
+        private void CreateDeviceHolders()
+        {
+            var deviceHolders = GetMatchToAmountDeviceHolders();
+            var points = gridPointsSetup.GetGridPositions();
+        
+            for (var i = 0; i < deviceHolders.Length; i++)
             {
-                var point = Instantiate(deviceHolderPrefab, deviceHoldersContainerTransform);
-                points.Add(point);
+                deviceHolders[i].transform.position = points[i];
+                deviceHolders[i].transform.name = "Device Holder " + i;
             }
-            else if (points.Count > gridPointsSetup.GridElementsAmount)
+        }
+
+        private DeviceHolderController[] GetMatchToAmountDeviceHolders()
+        {
+            var points = new List<DeviceHolderController>(GetDeviceHolders());
+
+            while (points.Count != gridPointsSetup.GridElementsAmount)
             {
-                var point = points.Last();
-                points.Remove(point);
+                if (points.Count < gridPointsSetup.GridElementsAmount)
+                {
+                    var point = Instantiate(deviceHolderPrefab, deviceHoldersContainerTransform);
+                    points.Add(point);
+                }
+                else if (points.Count > gridPointsSetup.GridElementsAmount)
+                {
+                    var point = points.Last();
+                    points.Remove(point);
+                    DestroyImmediate(point.gameObject);
+                }
+            }
+
+            return points.ToArray();
+        }
+
+        private IEnumerable<DeviceHolderController> GetDeviceHolders() => deviceHoldersContainerTransform.GetComponentsInChildren<DeviceHolderController>(true);
+    
+        [Button("Create")]
+        private void Create()
+        {
+            gridPointsSetup = GetComponent<GridPointsSetup>();
+            CreateDeviceHolders();
+        }
+    
+        [Button("Remove")]
+        private void Remove()
+        {
+            var points = GetDeviceHolders();
+
+            foreach (var point in points)
+            {
                 DestroyImmediate(point.gameObject);
             }
-        }
-
-        return points.ToArray();
-    }
-
-    private IEnumerable<DeviceHolderController> GetDeviceHolders() => deviceHoldersContainerTransform.GetComponentsInChildren<DeviceHolderController>(true);
-    
-    [Button("Create")]
-    private void Create()
-    {
-        gridPointsSetup = GetComponent<GridPointsSetup>();
-        CreateDeviceHolders();
-    }
-    
-    [Button("Remove")]
-    private void Remove()
-    {
-        var points = GetDeviceHolders();
-
-        foreach (var point in points)
-        {
-            DestroyImmediate(point.gameObject);
         }
     }
 }
