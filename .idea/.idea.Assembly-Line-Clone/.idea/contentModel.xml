@@ -180,7 +180,7 @@
               </e>
             </e>
             <e p="Managers" t="Include">
-              <e p="BuilderManager.cs" t="Include" />
+              <e p="BuildManager.cs" t="Include" />
               <e p="DeviceHoldersManager.cs" t="Include" />
               <e p="GridPointsSetup.cs" t="Include" />
               <e p="SelectionManager.cs" t="Include" />
@@ -191,9 +191,35 @@
             <e p="CurrencyManager.cs" t="Include" />
             <e p="PointerStateManager.cs" t="Include" />
           </e>
+          <e p="ScriptableObjects" t="Include">
+            <e p="ManagersHolder.cs" t="Include" />
+          </e>
+          <e p="Systems" t="Include">
+            <e p="GameState.cs" t="Include" />
+            <e p="GameStateManager.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
-            <e p="BufferCurrencyTextController.cs" t="Include" />
-            <e p="TotalCurrencyTextController.cs" t="Include" />
+            <e p="Buttons" t="Include">
+              <e p="CancelSelectionButton.cs" t="Include" />
+              <e p="ClickUIButton.cs" t="Include" />
+              <e p="ConfirmSelectionButton.cs" t="Include" />
+              <e p="OpenBuildMenuButton.cs" t="Include" />
+              <e p="OpenDestroyMenu.cs" t="Include" />
+            </e>
+            <e p="Controllers" t="Include">
+              <e p="IScreenElementAnimationsController.cs" t="Include" />
+              <e p="ScreenElementsAnimationController.cs" t="Include" />
+              <e p="UIElementAnimationsController.cs" t="Include" />
+            </e>
+            <e p="Currency Panels" t="Include">
+              <e p="BufferCurrencyTextController.cs" t="Include" />
+              <e p="TotalCurrencyTextController.cs" t="Include" />
+            </e>
+            <e p="Managers" t="Include">
+              <e p="UIManagerBase.cs" t="Include" />
+              <e p="UISceneLoaderManager.cs" t="Include" />
+            </e>
+            <e p="UIScreen.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

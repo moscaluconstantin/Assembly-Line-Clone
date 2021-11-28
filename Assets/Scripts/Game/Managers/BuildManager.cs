@@ -3,11 +3,12 @@ using Enums;
 using Game.Controllers.Devices;
 using GlobalManagers;
 using NaughtyAttributes;
+using ScriptableObjects;
 using UnityEngine;
 
 namespace Game.Managers
 {
-    public class BuilderManager : MonoBehaviour
+    public class BuildManager : MonoBehaviour
     {
         [SerializeField] private StarterController starterControllerPrefab;
 
@@ -17,6 +18,7 @@ namespace Game.Managers
         private void Awake()
         {
             selectionManager.OnSelectionListModified += UpdateBufferCurrencyValue;
+            Resources.Load<ManagersHolder>("ManagersHolder").buildManager = this;
         }
 
         private void OnDestroy()

@@ -4,6 +4,7 @@ using Enums;
 using Game.Controllers;
 using GlobalManagers;
 using NaughtyAttributes;
+using ScriptableObjects;
 using UnityEngine;
 
 namespace Game.Managers
@@ -31,6 +32,7 @@ namespace Game.Managers
         {
             PointerStateManager.CurrentState = initialPointerState;
             selectedControllers=new List<DeviceHolderController>();
+            Resources.Load<ManagersHolder>("ManagersHolder").selectionManager = this;
         }
 
         private void Update()
@@ -81,7 +83,16 @@ namespace Game.Managers
             }
         }
 
-        public void ClearSelection() => selectedControllers.Clear();
+        public void ClearSelection()
+        {
+            foreach (var deviceHolderController in selectedControllers)
+            {
+                deviceHolderController.Deselect();
+            }
+            
+            selectedControllers.Clear();
+            OnSelectionListModified?.Invoke();
+        }
 
         private void HandleSelection(DeviceHolderController selectableController)
         {
