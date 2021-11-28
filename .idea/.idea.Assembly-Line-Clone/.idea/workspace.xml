@@ -17,10 +17,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Managers/UIManagerBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/DeviceHolderController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/DeviceHoldersManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Currency Panels/TotalCurrencyTextController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/IScreenElementAnimationsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ManagersHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/BuildManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/ScreenElementsAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Currency Panels/BufferCurrencyTextController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalManagers/CurrencyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/GridPointsSetup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/OpenBuildMenuButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -67,7 +69,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/DeviceHoldersManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/GridPointsSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/SetPointerStateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalManagers/CurrencyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CurrencyTextController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/BuilderManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/TotalCurrencyTextController.cs" />
@@ -87,6 +88,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ManagersHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Buttons/CancelSelectionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/SelectionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Currency Panels/BufferCurrencyTextController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalManagers/CurrencyManager.cs" />
       </list>
     </option>
   </component>

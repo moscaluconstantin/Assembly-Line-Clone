@@ -36,9 +36,9 @@ namespace Game.Managers
 
                 selectedController.AddDevice(device);
             }
-            
-            selectionManager.ClearSelection();
+
             CurrencyManager.FinishTransaction();
+            selectionManager.ClearSelection();
         }
         
         [Button("Remove")]
@@ -48,9 +48,9 @@ namespace Game.Managers
             {
                 selectedController.RemoveDevice();
             }
-            
-            selectionManager.ClearSelection();
+
             CurrencyManager.FinishTransaction();
+            selectionManager.ClearSelection();
         }
 
         private void UpdateBufferCurrencyValue()

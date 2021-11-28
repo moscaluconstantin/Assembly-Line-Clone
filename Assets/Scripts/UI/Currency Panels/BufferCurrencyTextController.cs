@@ -28,7 +28,7 @@ namespace UI
         {
             currencyText.text = (newValue > 0 ? "+" : "") + newValue;
 
-            containerTransform.gameObject.SetActive(Mathf.Abs(newValue) > .1f);
+            // containerTransform.gameObject.SetActive(Mathf.Abs(newValue) > .1f);
         }
     }
 }

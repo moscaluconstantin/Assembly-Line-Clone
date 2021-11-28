@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace GlobalManagers
 {
@@ -15,7 +16,7 @@ namespace GlobalManagers
             set
             {
                 bufferCurrencyValue = value;
-
+                
                 OnBufferCurrencyValueChanged?.Invoke(bufferCurrencyValue);
             }
         }
